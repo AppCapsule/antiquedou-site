@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ステッカー屋アンティーク堂｜1枚から作るオーダーカッティングステッカー</title>
+<meta name="description" content="ステッカー屋アンティーク堂のオーダーカッティングステッカー。文字・名入れ、持ち込みデザイン、部活・チームのまとめ注文まで1枚から承ります。スマホの写真や手描きの画像からでも作れます。1色・2色。">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f151b;       /* ADロゴの地色 */
+  --ink-2:#1a222b;
+  --red:#f2382c;       /* ADロゴの赤 */
+  --white:#ffffff;
+  --paper:#f5f3ef;
+  --text:#1b1f24;
+  --muted:#5d6670;
+  --line:#e2ded6;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.8;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.display{font-family:"Dela Gothic One","Noto Sans JP",sans-serif;font-weight:400;letter-spacing:.02em}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:var(--ink);color:var(--white)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:40px;height:40px;border-radius:6px}
+.brand span{font-weight:900;font-size:15px;line-height:1.2}
+.brand small{display:block;color:var(--red);font-size:11px;font-weight:700}
+.nav-cta{background:var(--red);color:var(--white);text-decoration:none;font-weight:700;font-size:14px;padding:8px 16px;border-radius:999px}
+
+/* hero */
+.hero{background:var(--ink);color:var(--white);overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-top:56px;padding-bottom:72px}
+.hero .eyebrow{display:inline-block;background:var(--red);color:var(--white);font-weight:700;font-size:13px;padding:4px 12px;border-radius:4px;transform:rotate(-2deg)}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.2;margin:18px 0 16px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{color:#c9d1d9;font-size:16px;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:999px;font-size:16px}
+.btn-red{background:var(--red);color:var(--white);box-shadow:0 6px 0 #a6201a}
+.btn-red:active{transform:translateY(3px);box-shadow:0 3px 0 #a6201a}
+.btn-ghost{border:2px solid #fff;color:#fff}
+.hero-photo{margin:0;position:relative;transform:rotate(1.5deg)}
+.hero-photo img{width:100%;height:auto;border-radius:12px;border:6px solid #fff;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.hero-photo figcaption{position:absolute;left:-8px;bottom:-14px;background:var(--red);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:4px;transform:rotate(-3deg)}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
+.photos figure{margin:0;position:relative;border-radius:var(--radius);overflow:hidden}
+.photos img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 14px 10px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-size:14px;font-weight:700}
+.hero-stickers{position:relative;height:360px}
+.hero-stickers img{position:absolute;width:56%;border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.hero-stickers img:nth-child(1){left:0;top:20px;transform:rotate(-8deg)}
+.hero-stickers img:nth-child(2){right:0;top:0;transform:rotate(6deg)}
+.hero-stickers img:nth-child(3){left:22%;top:150px;transform:rotate(-2deg)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.badges span{border:1px solid #3a4652;color:#dfe5ea;font-size:13px;padding:3px 10px;border-radius:999px}
+
+/* sections */
+section{padding:72px 0}
+.sec-title{text-align:center;margin-bottom:40px}
+.sec-title .en{color:var(--red);font-weight:700;letter-spacing:.2em;font-size:12px}
+.sec-title h2{font-size:clamp(24px,4vw,34px);margin:4px 0 0;line-height:1.3}
+.sec-title p{color:var(--muted);margin:10px 0 0}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;position:relative}
+.card .num{font-family:"Dela Gothic One",sans-serif;color:var(--red);font-size:28px;line-height:1}
+.card h3{font-size:18px;margin:10px 0 8px;line-height:1.4}
+.card p{margin:0;color:var(--muted);font-size:14px}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery figure{margin:0;background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.gallery figcaption{padding:10px 14px;font-size:14px;font-weight:700}
+.note{color:var(--muted);font-size:13px;text-align:center;margin-top:16px}
+
+.colors{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:32px}
+.chip{text-align:center;font-size:12px;color:var(--muted);width:64px}
+.chip i{display:block;width:44px;height:44px;margin:0 auto 6px;border-radius:50%;border:1px solid #cfcac0}
+
+table.price{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--radius);overflow:hidden;font-size:15px}
+table.price th,table.price td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}
+table.price thead th{background:var(--ink);color:var(--white);font-weight:700}
+table.price td.yen{text-align:right;white-space:nowrap;font-weight:700}
+table.price td.yen small{font-weight:400;color:var(--muted)}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.price-grid h3{margin:0 0 10px;font-size:18px}
+.price-note{font-size:13px;color:var(--muted);margin-top:10px}
+.price-note strong{color:var(--text)}
+table.price td small{color:var(--muted);font-size:12px}
+h3.sub{margin:40px 0 6px;font-size:18px}
+details.yupack{margin-top:10px;padding:12px 16px}
+details.yupack table.price{margin-top:10px;font-size:14px}
+.shop-links{display:flex;gap:8px;margin-top:12px !important}
+.shop-links a{border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px}
+.draft{background:#0a0e12;border:1px solid #2c3742;border-radius:10px;padding:14px 16px;margin:16px 0 8px;font-size:13px;color:#dfe5ea;white-space:pre-wrap;font-family:inherit;line-height:1.7}
+.copy{display:block;margin:0 auto 4px;background:none;border:1px solid #5d6670;color:#dfe5ea;font:inherit;font-size:13px;padding:6px 16px;border-radius:999px;cursor:pointer}
+.order-box .reply{font-size:13px;color:#b8c2cc;margin:16px 0 0}
+
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+.flow li{list-style:none;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px}
+.flow li::before{counter-increment:step;content:"STEP " counter(step);display:inline-block;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;margin-bottom:8px}
+.flow h3{margin:0 0 6px;font-size:17px}
+.flow p{margin:0;font-size:14px;color:var(--muted)}
+ol.flow{padding:0;margin:0}
+
+.ng{background:var(--ink);color:var(--white);border-radius:var(--radius);padding:24px;margin-top:28px}
+.ng h3{margin:0 0 8px;color:var(--red);font-size:17px}
+.ng ul{margin:0;padding-left:1.2em;color:#d5dbe0;font-size:14px}
+
+.order{background:var(--ink);color:var(--white)}
+.order .sec-title p{color:#b8c2cc}
+.order-box{background:var(--ink-2);border:1px solid #2c3742;border-radius:var(--radius);padding:28px;max-width:720px;margin:0 auto}
+.order-box ul{margin:0 0 20px;padding-left:1.2em;color:#d5dbe0}
+.order-box .mail{display:block;text-align:center;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:16px;border-radius:999px;word-break:break-all}
+.order-box .soon{font-size:13px;color:#8d98a3;text-align:center;margin-top:12px}
+
+details{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin-bottom:10px}
+details summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--muted);font-size:14px}
+
+footer{background:#0a0e12;color:#9aa5af;padding:40px 0;font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+footer a{color:#dfe5ea}
+footer .links{display:flex;flex-wrap:wrap;gap:16px}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:40px;padding-bottom:48px}
+  .hero-photo{max-width:520px;margin:8px auto 0}
+  .cards,.flow{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .price-grid{grid-template-columns:1fr}
+  section{padding:56px 0}
+}
+@media (max-width:520px){
+  .cards,.flow{grid-template-columns:1fr}
+  .brand span{font-size:13px}
+  .nav-cta{padding:7px 12px;font-size:13px}
+  table.price{font-size:14px}
+  table.price th,table.price td{padding:10px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="ステッカー屋アンティーク堂 ロゴ"><span><small>ステッカー屋</small>アンティーク堂</span></a>
+    <a class="nav-cta" href="#order">オーダーする</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">1枚からOK・スマホの画像でOK</span>
+        <h1 class="display">好きな文字を、<br><em>カッティング</em><br>ステッカーに。</h1>
+        <p class="lead">チーム名、部活名、愛車に入れたいひと言。文字は、当店の書体からイメージに近いものを選んでお作りします。<br>写真や手描きを送るだけ。データがなくても作れます。</p>
+        <div class="btns">
+          <a class="btn btn-red" href="#order">オーダーのご相談</a>
+          <a class="btn btn-ghost" href="#price">料金を見る</a>
+        </div>
+        <div class="badges"><span>全11色・1色／2色</span><span>8〜25cm</span><span>屋外耐候シート</span><span>入金から2〜4日で発送</span></div>
+      </div>
+      <figure class="hero-photo">
+        <img src="img/photo-window-bukatsu.jpg" alt="車のリアガラスに貼った部活のカッティングステッカー（赤・青・緑・黄・橙）" width="1200" height="900">
+        <figcaption>リアガラスに貼った実物</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="service">
+    <div class="wrap">
+      <div class="sec-title"><div class="en">SERVICE</div><h2>こんなオーダーを承ります</h2></div>
+      <div class="cards">
+        <div class="card"><div class="num">01</div><h3>文字・名入れ</h3><p>チーム名、部活名、学校名、ニックネームなど。書体は、当店にある書体の中から、ご希望の雰囲気（筆文字風・ゴシック・手書き風など）に近いものを選びます。特定のフォント名の指定はお受けできません。</p></div>
+        <div class="card"><div class="num">02</div><h3>持ち込みデザイン</h3><p>お手持ちのロゴやイラストをカッティング用のデータにして作成します。スマホの写真や、紙に描いた手描きのラフからでも清書してお作りします。</p></div>
+        <div class="card"><div class="num">03</div><h3>既製品のアレンジ</h3><p>ショップの既製デザインの左右反転・色の変更・文字の変更は、ヤフオク・メルカリShopsでご購入後、すぐにメッセージでお知らせください。出品価格のままお作りします。</p><p class="shop-links"><a href="https://auctions.yahoo.co.jp/seller/u7CQ2JvJhqaCSNiNnHQhdNbmZqut" target="_blank" rel="noopener">ヤフオク</a><a href="https://jp.mercari.com/shops/profile/iiHV3FMVDahK7KeqKA6gta" target="_blank" rel="noopener">メルカリShops</a></p></div>
+        <div class="card"><div class="num">04</div><h3>部活・チームでまとめて</h3><p>部員分、メンバー分のまとめ注文も承ります。名前や背番号だけ違うものも、同じデザインとして割引します。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="works" style="background:var(--white)">
+    <div class="wrap">
+      <div class="sec-title"><div class="en">WORKS</div><h2>作例</h2><p>オーダーで作ったステッカーと、ショップで販売中のデザインの一部です。</p></div>
+      <div class="photos">
+        <figure><img src="img/photo-order-engine.jpg" alt="ピストンと歯車のエンブレム風オーダーステッカー（オレンジ）を金属面に貼った様子" loading="lazy"><figcaption>オーダー作例｜エンブレム風・文字入れ</figcaption></figure>
+        <figure><img src="img/photo-order-diesel.jpg" alt="給油ノズルとDIESEL ONLYの文字のオーダーステッカー（緑）" loading="lazy"><figcaption>オーダー作例｜給油口の表示</figcaption></figure>
+      </div>
+      <div class="gallery">
+        <figure><img src="img/ab003-rd.jpg" alt="籠球部（バスケ部）ステッカー 赤" loading="lazy"><figcaption>部活ステッカー｜籠球部</figcaption></figure>
+        <figure><img src="img/ab001-bk.jpg" alt="野球部ステッカー 黒" loading="lazy"><figcaption>部活ステッカー｜野球部</figcaption></figure>
+        <figure><img src="img/ab011-sv.jpg" alt="吹奏楽ステッカー 銀" loading="lazy"><figcaption>部活ステッカー｜吹奏楽</figcaption></figure>
+        <figure><img src="img/km001-gd.jpg" alt="漢字ステッカー 愛 金" loading="lazy"><figcaption>漢字ステッカー｜愛</figcaption></figure>
+        <figure><img src="img/tr002-wh.jpg" alt="トライバルステッカー 白" loading="lazy"><figcaption>トライバルステッカー</figcaption></figure>
+        <figure><img src="img/an001-bl.jpg" alt="シンボルステッカー 青" loading="lazy"><figcaption>シンボルステッカー</figcaption></figure>
+      </div>
+      <p class="note">既製デザインはヤフオク・メルカリShops・Amazonでも販売しています。</p>
+      <p class="shop-links" style="justify-content:center"><a href="https://auctions.yahoo.co.jp/seller/u7CQ2JvJhqaCSNiNnHQhdNbmZqut" target="_blank" rel="noopener">ヤフオク</a><a href="https://jp.mercari.com/shops/profile/iiHV3FMVDahK7KeqKA6gta" target="_blank" rel="noopener">メルカリShops</a><a href="https://www.amazon.co.jp/b?node=26286483051&amp;ie=UTF8&amp;marketplaceID=A1VC38T7YXB528&amp;me=A2M7TD52F8KTQA" target="_blank" rel="noopener">Amazon</a></p>
+    </div>
+  </section>
+
+  <section id="price">
+    <div class="wrap">
+      <div class="sec-title"><div class="en">PRICE</div><h2>色とサイズ・料金</h2><p>1色、または2色の組み合わせでお作りします。</p></div>
+      <div class="colors">
+        <div class="chip"><i style="background:#000000"></i>黒</div>
+        <div class="chip"><i style="background:#fff"></i>白</div>
+        <div class="chip"><i style="background:#b90a16"></i>赤</div>
+        <div class="chip"><i style="background:#103ca0"></i>青</div>
+        <div class="chip"><i style="background:#0098e8"></i>水色</div>
+        <div class="chip"><i style="background:#ec6212"></i>橙</div>
+        <div class="chip"><i style="background:#fcc400"></i>黄</div>
+        <div class="chip"><i style="background:#27643a"></i>緑</div>
+        <div class="chip"><i style="background:#ef8bae"></i>桃</div>
+        <div class="chip"><i style="background:linear-gradient(135deg,#8a6a2a,#e8d08a,#9b7a33)"></i>金</div>
+        <div class="chip"><i style="background:linear-gradient(135deg,#8e9399,#eef0f2,#9da2a8)"></i>銀</div>
+      </div>
+      <div class="price-grid">
+        <div>
+          <h3>ステッカー価格（1枚）</h3>
+          <table class="price">
+            <thead><tr><th>サイズ（縦横）</th><th style="text-align:right">1色</th><th style="text-align:right">2色</th></tr></thead>
+            <tbody>
+              <tr><td>8cm以内</td><td class="yen">780円</td><td class="yen">1,180円</td></tr>
+              <tr><td>15cm以内</td><td class="yen">1,180円</td><td class="yen">1,680円</td></tr>
+              <tr><td>20cm以内</td><td class="yen">1,480円</td><td class="yen">2,080円</td></tr>
+              <tr><td>25cm以内</td><td class="yen">1,880円</td><td class="yen">2,580円</td></tr>
+              <tr><td>幅30cm以内・長さ1mまで</td><td class="yen" colspan="2">お見積もり</td></tr>
+            </tbody>
+          </table>
+          <p class="price-note">2色は、当店で位置を合わせて転写シート1枚にまとめてお届けします。<br>同じデザイン・同じ色・同じサイズの2枚目以降は1枚につき20%引き（名前や背番号だけ違うものも対象）。10枚以上はお見積もりします。</p>
+        </div>
+        <div>
+          <h3>送料（1回のご注文につき1回）</h3>
+          <table class="price">
+            <thead><tr><th>いちばん大きいステッカー</th><th style="text-align:right">送料</th></tr></thead>
+            <tbody>
+              <tr><td>縦横20cm以内</td><td class="yen">250円</td></tr>
+              <tr><td>縦横25cm以内</td><td class="yen">350円</td></tr>
+              <tr><td>それより大きいもの</td><td class="yen">ゆうパック<small>（下表）</small></td></tr>
+            </tbody>
+          </table>
+          <details class="yupack"><summary>ゆうパック60サイズの送料（地域別）</summary>
+          <table class="price">
+            <tbody>
+              <tr><td>広島県内</td><td class="yen">840円</td></tr>
+              <tr><td>近畿・中国・四国・九州</td><td class="yen">970円</td></tr>
+              <tr><td>北陸・東海</td><td class="yen">1,090円</td></tr>
+              <tr><td>関東・信越</td><td class="yen">1,270円</td></tr>
+              <tr><td>沖縄</td><td class="yen">1,470円</td></tr>
+              <tr><td>東北</td><td class="yen">1,550円</td></tr>
+              <tr><td>北海道</td><td class="yen">1,910円</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <p class="price-note">例：15cm・1色・1枚なら 1,180円＋送料250円＝<strong>1,430円</strong></p>
+        </div>
+      </div>
+      <h3 class="sub">データの作成料金</h3>
+      <p class="price-note" style="margin-top:0">いただいた画像を見て、お見積もりのときにどれに当たるかをお知らせします。</p>
+      <table class="price">
+        <thead><tr><th>いただくもの</th><th style="text-align:right">追加料金</th></tr></thead>
+        <tbody>
+          <tr><td><strong>そのまま切れるもの</strong><br><small>文字だけ（当店の書体で組みます）／ai・svg・pdfのデータ／線がくっきりした画像</small></td><td class="yen">0円</td></tr>
+          <tr><td><strong>データ起こし</strong><br><small>スマホの写真、手描きのラフ、ぼやけた画像</small></td><td class="yen">+500円</td></tr>
+          <tr><td><strong>細かいトレース</strong><br><small>線が細かい・込み入った図柄</small></td><td class="yen">+1,500円<small>〜</small></td></tr>
+        </tbody>
+      </table>
+      <p class="price-note">画像から作ったデータは、細かい部分が元の画像と完全には一致しません。すべてのご注文で、お支払いの前に仕上がりの確認画像をお送りします（修正1回まで無料）。イメージだけからのオリジナルデザインの作成はお受けしていません。手描きのラフ（紙に描いて撮影したもので大丈夫です）をお送りください。</p>
+    </div>
+  </section>
+
+  <section id="flow" style="background:var(--white)">
+    <div class="wrap">
+      <div class="sec-title"><div class="en">FLOW</div><h2>ご注文の流れ</h2></div>
+      <ol class="flow">
+        <li><h3>ご相談</h3><p>メールで、文字・色・サイズ・枚数をお知らせください。画像があれば添付してください。</p></li>
+        <li><h3>お見積もりと確認画像</h3><p>金額と仕上がりの確認画像をメールでお送りします。書体や形のご希望はこの段階ですり合わせます（修正1回まで無料）。</p></li>
+        <li><h3>お支払い</h3><p>確認画像にOKをいただいたら、メールでお送りするリンクからクレジットカードでお支払いください。</p></li>
+        <li><h3>製作・発送</h3><p>発送日は月・火・金です。ご入金からおおむね2〜4日で発送します（製作日：月・火・木・金）。転写シート付きで届きます。</p></li>
+      </ol>
+      <div class="ng">
+        <h3>お受けできないデザイン</h3>
+        <ul>
+          <li>キャラクター、ブランドロゴ、自動車メーカーのエンブレム、スポーツチームのロゴなど、他者の権利がある図柄（版権物）の持ち込み</li>
+          <li>公序良俗に反する内容、特定の個人・団体を傷つける内容</li>
+          <li>線が細かすぎてカッティングで再現できないデザイン（サイズ変更をご提案します）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <div class="wrap">
+      <div class="sec-title"><div class="en">ORDER</div><h2>オーダーのご相談</h2><p>まずはお気軽にご相談ください。お見積もりは無料です。</p></div>
+      <div class="order-box">
+        <p style="margin:0 0 4px">下のボタンを押すと、ご注文に必要な項目が入ったメールが開きます。項目を埋めて、画像があれば添付してお送りください。</p>
+        <pre class="draft" id="draft">【オーダーの種類】文字・名入れ／持ち込みデザイン／まとめ注文
+【入れたい文字・デザイン】
+【色】1色／2色（色名を2つ）
+【サイズ】8cm／15cm／20cm／25cm／その他
+【枚数】
+【お名前】
+【電話番号】（任意）
+【その他・ご要望】
+
+※画像や手描きのデザインがある場合は、このメールに添付してください。</pre>
+        <button type="button" class="copy" id="copy">上の文面をコピー</button>
+        <p class="soon" style="margin:0 0 16px">メールが開かないときは、コピーして antique@okatashoji.com あてにお送りください。</p>
+        <a class="mail" id="mail" href="mailto:antique@okatashoji.com?subject=%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">antique@okatashoji.com にメールする</a>
+        <p class="reply">ひとりで一枚ずつ作っている小さなお店です。お返事は製作日に順番にお送りしていますが、外に出ている日が続くと、少しお時間をいただくことがあります。2〜3日たっても返信がないときは、お手数ですがもう一度メールをお送りください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap" style="max-width:820px">
+      <div class="sec-title"><div class="en">FAQ</div><h2>よくあるご質問</h2></div>
+      <details><summary>カッティングステッカーとは？</summary><p>色のついたシートを文字や図柄の形に切り抜いたステッカーです。背景がなく、貼ると文字や図柄だけが残ります。1色、または2色の組み合わせでお作りします。転写シート付きでお届けするので、そのまま貼れます。</p></details>
+      <details><summary>好きなフォントを指定できますか？</summary><p>当店にある書体から、ご希望に近い雰囲気のものを選んでお作りします。特定のフォント名の指定はお受けできません。お見積もりのときに確認画像でお見せするので、イメージと違えばその段階でご相談ください。</p></details>
+      <details><summary>屋外で使えますか？</summary><p>屋外耐候性・耐水性に優れたシートを使っています。車の外装やヘルメットにもお使いいただけます。</p></details>
+      <details><summary>貼り方は難しいですか？</summary><p>貼る面のほこりや油分をよく拭き取ってから貼ってください。大きいサイズは水貼りがおすすめです。貼り付けはお客様ご自身で行っていただくもので、貼り付け時の失敗は保証の対象外となります。</p></details>
+      <details><summary>いつ届きますか？</summary><p>発送日は月・火・金です。ご入金からおおむね2〜4日で発送します。お返事や発送が遅れる場合は、メールでお知らせします。</p></details>
+      <details><summary>注文後に変更やキャンセルはできますか？</summary><p>製作前でしたら変更できます。オーダー品のため、製作開始後の変更・キャンセルはお受けできません。</p></details>
+      <details><summary>返品・交換はできますか？</summary><p>オーダー品のため、お客様のご都合による返品・交換はお受けしていません。届いた商品に不良があった場合は、到着後7日以内にご連絡ください。作り直してお送りします。</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">ステッカー屋アンティーク堂</strong><br>運営：アンティーク岡多</div>
+    <div class="links">
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+<script>
+// メールの下書きはページに表示している文面（#draft）から作る
+(function(){
+  var draft=document.getElementById('draft').textContent;
+  var subject='オーダーのご相談';
+  document.getElementById('mail').href='mailto:antique@okatashoji.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(draft.replace(/\n/g,'\r\n'));
+  var btn=document.getElementById('copy');
+  btn.addEventListener('click',function(){
+    var done=function(){btn.textContent='コピーしました';setTimeout(function(){btn.textContent='上の文面をコピー';},2000);};
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(draft).then(done);return;}
+    var t=document.createElement('textarea');t.value=draft;document.body.appendChild(t);t.select();
+    try{document.execCommand('copy');done();}catch(e){}
+    document.body.removeChild(t);
+  });
+})();
+</script>
+</body>
+</html>
