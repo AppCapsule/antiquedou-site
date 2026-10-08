@@ -101,6 +101,11 @@ table.price td small{color:var(--muted);font-size:12px}
 h3.sub{margin:40px 0 6px;font-size:18px}
 details.yupack{margin-top:10px;padding:12px 16px}
 details.yupack table.price{margin-top:10px;font-size:14px}
+details.datafee{margin-top:40px}
+details.datafee summary small{font-weight:400;color:var(--muted);margin-left:6px}
+details.datafee table.price{margin-top:10px}
+details.draft-box{background:none;border:1px solid #2c3742;margin:16px 0}
+details.draft-box summary{color:#dfe5ea;font-size:14px}
 .shop-links{display:flex;gap:8px;margin-top:12px !important}
 .shop-links a{border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px}
 .draft{background:#0a0e12;border:1px solid #2c3742;border-radius:10px;padding:14px 16px;margin:16px 0 8px;font-size:13px;color:#dfe5ea;white-space:pre-wrap;font-family:inherit;line-height:1.7}
@@ -114,9 +119,9 @@ details.yupack table.price{margin-top:10px;font-size:14px}
 .flow p{margin:0;font-size:14px;color:var(--muted)}
 ol.flow{padding:0;margin:0}
 
-.ng{background:var(--ink);color:var(--white);border-radius:var(--radius);padding:24px;margin-top:28px}
-.ng h3{margin:0 0 8px;color:var(--red);font-size:17px}
-.ng ul{margin:0;padding-left:1.2em;color:#d5dbe0;font-size:14px}
+details.ng{background:var(--ink);color:var(--white);border:none;padding:18px 24px;margin-top:28px}
+details.ng summary{color:var(--red);font-size:16px}
+details.ng ul{margin:10px 0 0;padding-left:1.2em;color:#d5dbe0;font-size:14px}
 
 .order{background:var(--ink);color:var(--white)}
 .order .sec-title p{color:#b8c2cc}
@@ -184,7 +189,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
     <div class="wrap">
       <div class="sec-title"><div class="en">SERVICE</div><h2>こんなオーダーを承ります</h2></div>
       <div class="cards">
-        <div class="card"><div class="num">01</div><h3>文字・名入れ</h3><p>チーム名、部活名、学校名、ニックネームなど。書体は、当店にある書体の中から、ご希望の雰囲気（筆文字風・ゴシック・手書き風など）に近いものを選びます。特定のフォント名の指定はお受けできません。</p></div>
+        <div class="card"><div class="num">01</div><h3>文字・名入れ</h3><p>チーム名、部活名、学校名、ニックネームなど。書体は、当店にある書体の中から、ご希望の雰囲気（筆文字風・ゴシック・手書き風など）に近いものを選びます。</p></div>
         <div class="card"><div class="num">02</div><h3>持ち込みデザイン</h3><p>お手持ちのロゴやイラストをカッティング用のデータにして作成します。スマホの写真や、紙に描いた手描きのラフからでも清書してお作りします。</p></div>
         <div class="card"><div class="num">03</div><h3>既製品のアレンジ</h3><p>ショップの既製デザインの左右反転・色の変更・文字の変更は、ヤフオク・メルカリShopsでご購入後、すぐにメッセージでお知らせください。出品価格のままお作りします。</p><p class="shop-links"><a href="https://auctions.yahoo.co.jp/seller/u7CQ2JvJhqaCSNiNnHQhdNbmZqut" target="_blank" rel="noopener">ヤフオク</a><a href="https://jp.mercari.com/shops/profile/iiHV3FMVDahK7KeqKA6gta" target="_blank" rel="noopener">メルカリShops</a></p></div>
         <div class="card"><div class="num">04</div><h3>部活・チームでまとめて</h3><p>部員分、メンバー分のまとめ注文も承ります。名前や背番号だけ違うものも、同じデザインとして割引します。</p></div>
@@ -269,8 +274,8 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
           <p class="price-note">例：15cm・1色・1枚なら 1,180円＋送料250円＝<strong>1,430円</strong></p>
         </div>
       </div>
-      <h3 class="sub">データの作成料金</h3>
-      <p class="price-note" style="margin-top:0">いただいた画像を見て、お見積もりのときにどれに当たるかをお知らせします。</p>
+      <details class="datafee"><summary>データの作成料金<small>写真・手描きから作るとき（0円〜）</small></summary>
+      <p class="price-note">いただいた画像を見て、お見積もりのときにどれに当たるかをお知らせします。</p>
       <table class="price">
         <thead><tr><th>いただくもの</th><th style="text-align:right">追加料金</th></tr></thead>
         <tbody>
@@ -279,7 +284,8 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
           <tr><td><strong>細かいトレース</strong><br><small>線が細かい・込み入った図柄</small></td><td class="yen">+1,500円<small>〜</small></td></tr>
         </tbody>
       </table>
-      <p class="price-note">画像から作ったデータは、細かい部分が元の画像と完全には一致しません。すべてのご注文で、お支払いの前に仕上がりの確認画像をお送りします（修正1回まで無料）。イメージだけからのオリジナルデザインの作成はお受けしていません。手描きのラフ（紙に描いて撮影したもので大丈夫です）をお送りください。</p>
+      <p class="price-note">画像から作ったデータは、細かい部分が元の画像と完全には一致しません。イメージだけからのオリジナルデザインの作成はお受けしていません。手描きのラフ（紙に描いて撮影したもので大丈夫です）をお送りください。</p>
+      </details>
     </div>
   </section>
 
@@ -292,14 +298,14 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
         <li><h3>お支払い</h3><p>確認画像にOKをいただいたら、メールでお送りするリンクからクレジットカードでお支払いください。</p></li>
         <li><h3>製作・発送</h3><p>発送日は月・火・金です。ご入金からおおむね2〜4日で発送します（製作日：月・火・木・金）。転写シート付きで届きます。</p></li>
       </ol>
-      <div class="ng">
-        <h3>お受けできないデザイン</h3>
+      <details class="ng">
+        <summary>お受けできないデザイン（版権物など）</summary>
         <ul>
           <li>キャラクター、ブランドロゴ、自動車メーカーのエンブレム、スポーツチームのロゴなど、他者の権利がある図柄（版権物）の持ち込み</li>
           <li>公序良俗に反する内容、特定の個人・団体を傷つける内容</li>
           <li>線が細かすぎてカッティングで再現できないデザイン（サイズ変更をご提案します）</li>
         </ul>
-      </div>
+      </details>
     </div>
   </section>
 
@@ -307,7 +313,9 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
     <div class="wrap">
       <div class="sec-title"><div class="en">ORDER</div><h2>オーダーのご相談</h2><p>まずはお気軽にご相談ください。お見積もりは無料です。</p></div>
       <div class="order-box">
-        <p style="margin:0 0 4px">下のボタンを押すと、ご注文に必要な項目が入ったメールが開きます。項目を埋めて、画像があれば添付してお送りください。</p>
+        <p style="margin:0 0 16px">下のボタンを押すと、ご注文に必要な項目が入ったメールが開きます。項目を埋めて、画像があれば添付してお送りください。</p>
+        <a class="mail" id="mail" href="mailto:antique@okatashoji.com?subject=%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">antique@okatashoji.com にメールする</a>
+        <details class="draft-box"><summary>メールが開かないとき（項目をコピー）</summary>
         <pre class="draft" id="draft">【オーダーの種類】文字・名入れ／持ち込みデザイン／まとめ注文
 【入れたい文字・デザイン】
 【色】1色／2色（色名を2つ）
@@ -319,8 +327,8 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
 
 ※画像や手描きのデザインがある場合は、このメールに添付してください。</pre>
         <button type="button" class="copy" id="copy">上の文面をコピー</button>
-        <p class="soon" style="margin:0 0 16px">メールが開かないときは、コピーして antique@okatashoji.com あてにお送りください。</p>
-        <a class="mail" id="mail" href="mailto:antique@okatashoji.com?subject=%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">antique@okatashoji.com にメールする</a>
+        <p class="soon" style="margin:0">コピーして antique@okatashoji.com あてにお送りください。</p>
+        </details>
         <p class="reply">ひとりで一枚ずつ作っている小さなお店です。お返事は製作日に順番にお送りしていますが、外に出ている日が続くと、少しお時間をいただくことがあります。2〜3日たっても返信がないときは、お手数ですがもう一度メールをお送りください。</p>
       </div>
     </div>
