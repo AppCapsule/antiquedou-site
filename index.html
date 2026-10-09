@@ -104,12 +104,8 @@ details.yupack table.price{margin-top:10px;font-size:14px}
 details.datafee{margin-top:40px}
 details.datafee summary small{font-weight:400;color:var(--muted);margin-left:6px}
 details.datafee table.price{margin-top:10px}
-details.draft-box{background:none;border:1px solid #2c3742;margin:16px 0}
-details.draft-box summary{color:#dfe5ea;font-size:14px}
 .shop-links{display:flex;gap:8px;margin-top:12px !important}
 .shop-links a{border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px}
-.draft{background:#0a0e12;border:1px solid #2c3742;border-radius:10px;padding:14px 16px;margin:16px 0 8px;font-size:13px;color:#dfe5ea;white-space:pre-wrap;font-family:inherit;line-height:1.7}
-.copy{display:block;margin:0 auto 4px;background:none;border:1px solid #5d6670;color:#dfe5ea;font:inherit;font-size:13px;padding:6px 16px;border-radius:999px;cursor:pointer}
 .order-box .reply{font-size:13px;color:#b8c2cc;margin:16px 0 0}
 
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
@@ -128,6 +124,8 @@ details.ng ul{margin:10px 0 0;padding-left:1.2em;color:#d5dbe0;font-size:14px}
 .order-box{background:var(--ink-2);border:1px solid #2c3742;border-radius:var(--radius);padding:28px;max-width:720px;margin:0 auto}
 .order-box ul{margin:0 0 20px;padding-left:1.2em;color:#d5dbe0}
 .order-box .mail{display:block;text-align:center;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:16px;border-radius:999px;word-break:break-all}
+.order-box .ask{font-size:14px;color:#d5dbe0;text-align:center;margin:16px 0 0}
+.order-box .ask a{color:#fff}
 .order-box .soon{font-size:13px;color:#8d98a3;text-align:center;margin-top:12px}
 
 details{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin-bottom:10px}
@@ -293,7 +291,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
     <div class="wrap">
       <div class="sec-title"><div class="en">FLOW</div><h2>ご注文の流れ</h2></div>
       <ol class="flow">
-        <li><h3>ご相談</h3><p>メールで、文字・色・サイズ・枚数をお知らせください。画像があれば添付してください。</p></li>
+        <li><h3>ご相談</h3><p>フォームで、文字・色・サイズ・枚数をお知らせください。画像があれば一緒にお送りください。</p></li>
         <li><h3>お見積もりと確認画像</h3><p>金額と仕上がりの確認画像をメールでお送りします。書体や形のご希望はこの段階ですり合わせます（修正1回まで無料、2回目からは1回300円。当店の誤りの修正は無料です）。</p></li>
         <li><h3>お支払い</h3><p>確認画像にOKをいただいたら、メールでお送りするリンクからクレジットカードで、または銀行振込でお支払いください（お支払い期限はご案内から7日、振込手数料はお客様のご負担です）。</p></li>
         <li><h3>製作・発送</h3><p>発送日は月・火・金です。ご入金からおおむね2〜4日で発送します（製作日：月・火・木・金）。転写シート付きで届きます。</p></li>
@@ -314,23 +312,10 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
     <div class="wrap">
       <div class="sec-title"><div class="en">ORDER</div><h2>オーダーのご相談</h2><p>まずはお気軽にご相談ください。お見積もりは無料です。</p></div>
       <div class="order-box">
-        <p style="margin:0 0 16px">下のボタンを押すと、ご注文に必要な項目が入ったメールが開きます。項目を埋めて、画像があれば添付してお送りください。</p>
-        <a class="mail" id="mail" href="mailto:antique@okatashoji.com?subject=%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">antique@okatashoji.com にメールする</a>
-        <details class="draft-box"><summary>メールが開かないとき（項目をコピー）</summary>
-        <pre class="draft" id="draft">【オーダーの種類】文字・名入れ／持ち込みデザイン／まとめ注文
-【入れたい文字・デザイン】
-【色】1色／2色（色名を2つ）
-【サイズ】8cm／15cm／20cm／25cm／その他
-【枚数】
-【お名前】
-【電話番号】（任意）
-【その他・ご要望】
-
-※画像や手描きのデザインがある場合は、このメールに添付してください。</pre>
-        <button type="button" class="copy" id="copy">上の文面をコピー</button>
-        <p class="soon" style="margin:0">コピーして antique@okatashoji.com あてにお送りください。</p>
-        </details>
-        <p class="reply">ひとりで一枚ずつ作っている小さなお店です。お返事は製作日に順番にお送りしていますが、外に出ている日が続くと、少しお時間をいただくことがあります。2〜3日たっても返信がないときは、お手数ですがもう一度メールをお送りください。<br>当店からのメールが届くよう、antique@okatashoji.com からのメールを受信できる設定にしてください（携帯会社のメールは特にご注意ください）。</p>
+        <p style="margin:0 0 16px">下のボタンから、ご相談のフォームが開きます。画像（写真・手描き・ロゴなど）も3枚まで一緒に送れます。送信するとすぐに注文番号をお知らせします。</p>
+        <a class="mail" href="https://script.google.com/macros/s/AKfycbw1BQuYChGl_rk5q7iFNsrdRAohQGBXxpV9WV3FfcEzoa3F8MkjgeaeZAxoZGp3l9fBJQ/exec" target="_blank" rel="noopener">フォームで相談する</a>
+        <p class="ask">ご注文はフォームからお願いします。<br>ご注文前のご質問は <a href="mailto:antique@okatashoji.com">antique@okatashoji.com</a> へどうぞ。</p>
+        <p class="reply">ひとりで一枚ずつ作っている小さなお店です。お返事は製作日に順番にお送りしていますが、外に出ている日が続くと、少しお時間をいただくことがあります。2〜3日たっても返信がないときは、お手数ですが自動返信メールにご返信ください。<br>当店からのメールが届くよう、@okatashoji.com からのメールを受信できる設定にしてください（携帯会社のメールは特にご注意ください）。</p>
       </div>
     </div>
   </section>
@@ -360,21 +345,5 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
     </div>
   </div>
 </footer>
-<script>
-// メールの下書きはページに表示している文面（#draft）から作る
-(function(){
-  var draft=document.getElementById('draft').textContent;
-  var subject='オーダーのご相談';
-  document.getElementById('mail').href='mailto:antique@okatashoji.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(draft.replace(/\n/g,'\r\n'));
-  var btn=document.getElementById('copy');
-  btn.addEventListener('click',function(){
-    var done=function(){btn.textContent='コピーしました';setTimeout(function(){btn.textContent='上の文面をコピー';},2000);};
-    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(draft).then(done);return;}
-    var t=document.createElement('textarea');t.value=draft;document.body.appendChild(t);t.select();
-    try{document.execCommand('copy');done();}catch(e){}
-    document.body.removeChild(t);
-  });
-})();
-</script>
 </body>
 </html>
